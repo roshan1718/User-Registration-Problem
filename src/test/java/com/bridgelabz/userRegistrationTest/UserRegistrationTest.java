@@ -49,5 +49,16 @@ public class UserRegistrationTest {
         }
     }
 
+    @Test
+    public void mobileNumber_ValidThenTrue() {
+        boolean MobileNumber=test.checkMobile("91 1234567890");
+        Assert.assertTrue(MobileNumber);
+    }
+    @Test
+    public void mobileNumber_ValidThenFalse() {
+        boolean MobileNumber=test.checkMobile("234567890");
+        Assert.assertFalse(MobileNumber);
+    }
+
 
 }
