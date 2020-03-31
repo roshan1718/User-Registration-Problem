@@ -69,6 +69,16 @@ public class UserRegistrationTest {
         boolean Password=test.checkPassword("aaaa");
         Assert.assertFalse(Password);
     }
+    @Test
+    public void password2_ValidThenTrue() {
+        boolean Password2=test.checkPassword2("RoshanShinde");
+        Assert.assertTrue(Password2);
+    }
+    @Test
+    public void password2_InvalidThenFalse() {
+        boolean Password2=test.checkPassword2("roshanshinde");
+        Assert.assertFalse(Password2);
+    }
 
 
 }
